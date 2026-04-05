@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AJTE Products</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Animated background canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Hero section -->
+  <section id="hero">
+    <h1>AJTE Products</h1>
+    <div class="scroll-hint">
+      <span>Our Apps</span>
+      <div class="arrow"></div>
+    </div>
+  </section>
+
+  <!-- Products section -->
+  <section id="products">
+    <div class="products-grid">
+
+      <!-- GameVault -->
+      <div class="product-card" onclick="window.location='gamevault/index.html'">
+        <div class="product-image-placeholder">
+          <img src="gamevault/icon-gamevault.png" alt="GameVault" />
+        </div>
+        <h2>GameVault</h2>
+        <p>Track your game collection</p>
+      </div>
+
+      <!-- Kountr -->
+      <div class="product-card" onclick="window.location='kountr/index.html'">
+        <div class="product-image-placeholder">
+          <img src="kountr/icon-kountr.png" alt="Kountr" />
+        </div>
+        <h2>Kountr</h2>
+        <p>Simple counting, your way</p>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="canvas.js"></script>
+</body>
+</html>

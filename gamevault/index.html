@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GameVault – AJTE Products</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body style="background:#fff;">
+
+  <div class="product-detail">
+
+    <a href="../index.html" class="back">← All Apps</a>
+
+    <div class="app-header">
+      <div class="app-icon">
+        <img src="icon-gamevault.png" alt="GameVault" />
+      </div>
+      <div class="app-title">
+        <h1>GameVault</h1>
+        <p>Track your game collection</p>
+      </div>
+    </div>
+
+    <div class="tab-nav">
+      <button class="tab-btn" id="btn-tos"     onclick="showTab('tos')">Terms of Service</button>
+      <button class="tab-btn" id="btn-privacy" onclick="showTab('privacy')">Privacy Policy</button>
+    </div>
+
+    <!-- Terms of Service -->
+    <div id="tos" class="tab-panel">
+      <h2>Terms of Service</h2>
+      <p><strong>Effective Date:</strong> April 5, 2026</p>
+      <p>By using CardVault, you agree to these terms.</p>
+
+      <h2>Use of the App</h2>
+      <ul>
+        <li>You must be 13 or older to use this app.</li>
+        <li>You are responsible for maintaining the security of your account.</li>
+        <li>You agree not to misuse the app (e.g., cheating, hacking, or disrupting other users).</li>
+      </ul>
+
+      <h2>User Content</h2>
+      <p>Any content you create within the app (collections, game data) remains yours. You grant us a license to store and display it within the app.</p>
+
+      <h2>Advertising</h2>
+      <p>The app displays ads powered by Google AdMob. Ad content is governed by Google's policies.</p>
+
+      <h2>Disclaimer</h2>
+      <p>The app is provided "as is" without warranties of any kind. We are not liable for data loss or interruptions in service.</p>
+
+      <h2>Changes</h2>
+      <p>We may update these terms at any time. Continued use of the app after changes constitutes acceptance. The latest version is always available at this page.</p>
+
+      <h2>Contact</h2>
+      <p>Questions? Email us at <a href="mailto:ajteproducts@gmail.com">ajteproducts@gmail.com</a>.</p>
+
+      <p class="last-updated">Last updated: April 5, 2026</p>
+    </div>
+
+    <!-- Privacy Policy -->
+    <div id="privacy" class="tab-panel">
+      <h2>Privacy Policy</h2>
+      <p><strong>Effective Date:</strong> April 5, 2026</p>
+      <p>CardVault ("we", "our", or "us") is committed to protecting your privacy. This policy explains what data we collect and how we use it.</p>
+
+      <h2>What We Collect</h2>
+      <ul>
+        <li><strong>Account data:</strong> Email address and username when you create an account (via Supabase authentication).</li>
+        <li><strong>Usage data:</strong> Game activity, card collections, and app interactions stored in our database.</li>
+        <li><strong>Advertising data:</strong> We use Google AdMob to serve ads. AdMob may collect device identifiers and usage data to serve personalized ads. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for details.</li>
+        <li><strong>Device data:</strong> Basic device info (OS version, device type) collected automatically by Expo and AdMob.</li>
+      </ul>
+
+      <h2>How We Use Your Data</h2>
+      <ul>
+        <li>To provide and improve the app experience</li>
+        <li>To sync your data across devices</li>
+        <li>To display relevant advertisements</li>
+      </ul>
+
+      <h2>Data Storage</h2>
+      <p>Your data is stored securely via Supabase. We do not sell your personal information to third parties.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>This app is not directed at children under 13. We do not knowingly collect data from children under 13.</p>
+
+      <h2>Contact</h2>
+      <p>Questions? Email us at <a href="mailto:ajteproducts@gmail.com">ajteproducts@gmail.com</a>.</p>
+
+      <p class="last-updated">Last updated: April 5, 2026</p>
+    </div>
+
+  </div>
+
+  <script>
+    function showTab(id) {
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      document.getElementById('btn-' + id).classList.add('active');
+      location.hash = id;
+    }
+
+    // Show tab based on URL hash, defaulting to tos
+    const hash = location.hash.replace('#', '');
+    showTab(hash === 'privacy' ? 'privacy' : 'tos');
+  </script>
+</body>
+</html>
