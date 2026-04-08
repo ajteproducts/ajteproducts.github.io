@@ -25,6 +25,7 @@
     <div class="tab-nav">
       <button class="tab-btn" id="btn-tos"     onclick="showTab('tos')">Terms of Service</button>
       <button class="tab-btn" id="btn-privacy" onclick="showTab('privacy')">Privacy Policy</button>
+      <button class="tab-btn" id="btn-support" onclick="showTab('support')">Support</button>
     </div>
 
     <!-- Terms of Service -->
@@ -91,6 +92,12 @@
       <p class="last-updated">Last updated: April 5, 2026</p>
     </div>
 
+    <!-- Support -->
+    <div id="support" class="tab-panel">
+      <h2>Support</h2>
+      <p>Need help? Email us at <a href="mailto:ajteproducts@gmail.com">ajteproducts@gmail.com</a> and we'll get back to you as soon as possible.</p>
+    </div>
+
   </div>
 
   <script>
@@ -104,7 +111,7 @@
 
     // Show tab based on URL hash, defaulting to tos
     const hash = location.hash.replace('#', '');
-    showTab(hash === 'privacy' ? 'privacy' : 'tos');
+    showTab(['privacy', 'support'].includes(hash) ? hash : 'tos');
   </script>
 </body>
 </html>
